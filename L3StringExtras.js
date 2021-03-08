@@ -1,27 +1,27 @@
-const stringExtras = (a, n) => {
-    let str = 'a';
-    const repeat = (a,n) => {
+const stringExtras =  {
+    // str: 'a',
+    repeat (a,n) {
         if (a.length < n) {
-            str = `\"${' ' * (n-a.length)}${str}\"`
+            return `\"${' '.repeat(n-a.length)}${this}\"`
+            // return this.str;
         }
         console.log("hello")
-    }
-    const leftPad = str => {
+    },
+    leftPad (a,n) {
 
-    }
-    const rightPad = str => {
+    },
+    rightPad (a,n) {
 
-    }
-    const pad = str => {
+    },
+    pad (a,n) {
 
-    }
-    const capitalize = str => {
+    },
+    capitalize (a,n) {
 
-    }
-    return str;
+    },
 };
 
-console.log(stringExtras('you', 5));
+console.log(stringExtras.repeat('you', 5));
 
 
 // String Extras
