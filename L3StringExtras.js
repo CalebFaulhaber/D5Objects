@@ -1,27 +1,69 @@
+// const StringExtras = {
+//     name: 'john',
+//     age: 32,
+//     // repeat: function (string, n) {
+//     //   let repeated_string = ''
+//     //   for (let i = 0; i < n; i++) {
+//     //     repeated_string += string
+//     //   }
+//     //     return repeated_string
+//     //   },
+//     //   leftPad: function (string, n) {
+//     //     return
+//     //   },
+//     repeat(string, n) {
+//       let repeated_string = ''
+//       for (let i = 0; i < n; i++) {
+//         repeated_string += string
+//       }
+//       return repeated_string
+//     },
+//   }
+  
+//   let a = 'you'
+  
+//   console.log(StringExtras.repeat(a, 3)) // returns 'youyouyou'
+  
+
 const stringExtras =  {
     // str: 'a',
-    repeat (a,n) {
-        if (a.length < n) {
-            return `\"${' '.repeat(n-a.length)}${this}\"`
-            // return this.str;
+    repeat (str,n) {
+        return `${str.repeat(n)}`;
+    },
+    leftPad (str,n) {
+        if (str.length < n) {
+            return `${' '.repeat(n-str.length)}${str}`
+        } else return str;
+    },
+    rightPad (str,n) {
+        if (str.length < n) {
+            return `${str}${' '.repeat(n-str.length)}`
         }
-        console.log("hello")
     },
-    leftPad (a,n) {
-
-    },
-    rightPad (a,n) {
-
-    },
-    pad (a,n) {
-
-    },
-    capitalize (a,n) {
-
+    // pad (str,n) {
+    //     if (str.length >= n) {
+    //         console.log('here')
+    //         return str;
+    //     } else {
+    //         let left = '';
+    //         let rigth = '';
+    //         for (let i = 1; i <= n - str.length; i++) {
+    //             console.log('here 51')
+    //             if (i % 2 === 1) {
+    //                 left += ' ';
+    //             } else {
+    //                 right += ' ';
+    //             }
+    //         }
+    //         return `\"${left}${str}${right}\"`;
+    //     }
+    // },
+    capitalize (str) {
+        return str[0].toUpperCase() + str.slice(1);
     },
 };
 
-console.log(stringExtras.repeat('you', 5));
+console.log(stringExtras.capitalize('you', 6));
 
 
 // String Extras

@@ -1,4 +1,12 @@
+const string = {
+    this: a,
+    this: n,
+    func(a,n) {
+        return this;
+    }
+}
 
+console.log(string.func('you', 5));
 
 
 // const a = {a: 1, b: 2, c: 3};
