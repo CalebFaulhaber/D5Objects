@@ -1,4 +1,4 @@
-const testString = "An archer";
+onst testString = "An archer";
 
 function countChars(str) {
   const lowerCaseString = str.toLowerCase();
