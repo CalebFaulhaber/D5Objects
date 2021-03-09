@@ -1,9 +1,8 @@
-const func = (arr) => {
-    let arr2 = (..arr);
-    return arr2;
+const func = (str) => {
+    return `${str}${str}\n${str}\n\n${str}`
 }
 
-console.log(func([1,2,3,4,5,6]))
+console.log(func('str'))
 
 // const a = {a: 1, b: 2, c: 3};
 // const b = {a:26, y:25, x:24};
