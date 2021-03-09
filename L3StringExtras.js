@@ -1,3 +1,44 @@
+const stringExtras =  {
+    repeat (str,n) {
+        return `${str.repeat(n)}`;
+    },
+    leftPad (str,n) {
+        if (str.length < n) {
+            return `${' '.repeat(n-str.length)}${str}`
+        } else return str;
+    },
+    rightPad (str,n) {
+        if (str.length < n) {
+            return `${str}${' '.repeat(n-str.length)}`
+        }
+    },
+    pad (str,n) {
+        if (str.length >= n) {
+            console.log('here')
+            return str;
+        } else {
+            let left = '';
+            let rigth = '';
+            for (let i = 1; i <= n - str.length; i++) {
+                console.log('here 51')
+                if (i % 2 === 1) {
+                    left += ' ';
+                } else {
+                    right += ' ';
+                }
+            }
+            return `\"${left}${str}${right}\"`;
+        }
+    },
+    capitalize (str) {
+        return str[0].toUpperCase() + str.slice(1);
+    },
+};
+
+console.log(stringExtras.capitalize('you', 6));
+
+
+// ----------------start of Davids object------------------
 // const StringExtras = {
 //     name: 'john',
 //     age: 32,
@@ -23,47 +64,8 @@
 //   let a = 'you'
   
 //   console.log(StringExtras.repeat(a, 3)) // returns 'youyouyou'
-  
 
-const stringExtras =  {
-    // str: 'a',
-    repeat (str,n) {
-        return `${str.repeat(n)}`;
-    },
-    leftPad (str,n) {
-        if (str.length < n) {
-            return `${' '.repeat(n-str.length)}${str}`
-        } else return str;
-    },
-    rightPad (str,n) {
-        if (str.length < n) {
-            return `${str}${' '.repeat(n-str.length)}`
-        }
-    },
-    // pad (str,n) {
-    //     if (str.length >= n) {
-    //         console.log('here')
-    //         return str;
-    //     } else {
-    //         let left = '';
-    //         let rigth = '';
-    //         for (let i = 1; i <= n - str.length; i++) {
-    //             console.log('here 51')
-    //             if (i % 2 === 1) {
-    //                 left += ' ';
-    //             } else {
-    //                 right += ' ';
-    //             }
-    //         }
-    //         return `\"${left}${str}${right}\"`;
-    //     }
-    // },
-    capitalize (str) {
-        return str[0].toUpperCase() + str.slice(1);
-    },
-};
-
-console.log(stringExtras.capitalize('you', 6));
+// ---------------start of Davids object---------------------
 
 
 // String Extras
