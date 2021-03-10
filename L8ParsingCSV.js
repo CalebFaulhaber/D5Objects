@@ -17,7 +17,27 @@ const parseCSV = (csv) => {
     return arrObj;
 };
 
-console.log(parseCSV(csvData));
+// console.log(parseCSV(csvData));
+
+let func = (a) => {
+    if (a == 4) {
+        return true
+    } else return false
+}
+console.log(func(5))
+
+
+const search = (arr, str) => {
+    let lowCase = str.toLowerCase();
+    for (let val of arr) {
+        if (val.firstName == lowCase || val.lastName == lowCase) {
+            return val;
+        };
+    }
+    return 'No word searched for'
+}
+
+console.log(search(parseCSV(csvData), 'doe'))
 
 
 
