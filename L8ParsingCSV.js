@@ -17,7 +17,7 @@ const parseCSV = (csv) => {
     return arrObj;
 };
 
-// console.log(parseCSV(csvData));
+console.log(parseCSV(csvData));
 
 let func = (a) => {
     if (a == 4) {
