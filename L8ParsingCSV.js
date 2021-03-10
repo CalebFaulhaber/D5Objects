@@ -1,14 +1,23 @@
-let csvData = `id,firstName,lastName,email,
-1,jane,doe,wildmirror@yahoo.com,
-2,john,doe,tamepool@hotmail.com,
-3,sherlock,holmes,mag@glass.com,
-4,natalia,romanov,8legged@ninja.com,
-5,peter,quill,starlord@gmail.com,`;
+let csvData = `id,firstName,lastName,email\n1,jane,doe,wildmirror@yahoo.com\n2,john,doe,tamepool@hotmail.com\n3,sherlock,holmes,mag@glass.com\n4,natalia,romanov,8legged@ninja.com\n5,peter,quill,starlord@gmail.com`;
 
-const parseCSV = () => {
-    
+const parseCSV = (csv) => {
+    let arrData = csv.split("\n");
+    let arr2D = [];
+    let arrObj = []
+    for (let str of arrData) {
+        arr2D.push(str.split(','));
+    }
+    for (let i = 1; i < arr2D.length; i++) {
+        let innerObj = {}
+        for (let j = 0; j < arr2D[i].length; j++) {
+            innerObj[arr2D[0][j]] = arr2D[i][j];
+        }
+        arrObj.push(innerObj);
+    }
+    return arrObj;
 };
 
+console.log(parseCSV(csvData));
 
 
 
